@@ -43,3 +43,5 @@ def upload():
 
         print(results)
         return jsonify(results)
+
+app.run(host=data['server']['address'], port=data['server']['port'])

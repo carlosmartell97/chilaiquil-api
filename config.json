@@ -1,4 +1,8 @@
 {
+  "server": {
+    "address": "10.128.0.2",
+    "port": "80"
+  },
   "mongo_db": {
     "address": "localhost",
     "port": 27017,
