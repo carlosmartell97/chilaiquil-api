@@ -27,6 +27,20 @@ ir = ImageRecognizer(
     data['tensor_flow']['num_top_predictions']
 )
 
+def build_full_results(partial_results):
+    full_result = {}
+    for k in partial_results:
+        if k not in data['food_data']:
+            continue
+        full_result[k] = {
+            'value': partial_results[k],
+            'calories': data['food_data'][k]['calories'],
+            'fat': data['food_data'][k]['fat'],
+            'carbohidrates': data['food_data'][k]['carbohidrates'],
+            'protein': data['food_data'][k]['protein']
+        }
+    return full_result
+
 # Main and only route
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -42,6 +56,6 @@ def upload():
         del results['_id']
 
         print(results)
-        return jsonify(results)
+        return jsonify(build_full_results(results))
 
 app.run(host=data['server']['address'], port=data['server']['port'])

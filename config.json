@@ -1,6 +1,6 @@
 {
   "server": {
-    "address": "10.128.0.2",
+    "address": "10.12.221.36",
     "port": "80"
   },
   "mongo_db": {
@@ -18,5 +18,31 @@
     "num_top_predictions": 5
   },
   "img_path": "img/",
-  "tf_path": "tf/"
+  "tf_path": "tf/",
+  "food_data": {
+    "chilaquiles": {
+      "calories": 443,
+      "fat": 32.02,
+      "carbohidrates": 31.88,
+      "protein": 9.74
+    },
+    "hamburguesa": {
+      "calories": 426,
+      "fat": 22.92,
+      "carbohidrates": 31.73,
+      "protein": 9.74
+    },
+    "molletes": {
+      "calories": 443,
+      "fat": 32.02,
+      "carbohidrates": 31.88,
+      "protein": 9.74
+    },
+    "sandwich": {
+      "calories": 339,
+      "fat": 17.54,
+      "carbohidrates": 25.75,
+      "protein": 18.76
+    }
+  }
 }
