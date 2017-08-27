@@ -29,3 +29,5 @@ pip3 install tensorflow
 
 echo "Starting Mongo daemon..."
 service mongod start
+
+mkdir img
