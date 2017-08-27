@@ -13,7 +13,6 @@
     "output_layer_name": "final_result:0",
     "num_top_predictions": 5
   },
-  "abs_path": "/home/mike/Files/Documents/Hackatons/HackMty2017/api/",
   "img_path": "img/",
   "tf_path": "tf/"
 }

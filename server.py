@@ -7,8 +7,10 @@ import json
 import os
 
 # Configuration file
+abs_path = os.path.dirname(os.path.realpath(__file__)) + '/'
 with open('config.json') as json_data_file:
     data = json.load(json_data_file)
+
 
 # MongoDB
 app = Flask(__name__)
@@ -17,7 +19,7 @@ collection = client[data['mongo_db']['database']][data['mongo_db']['collection']
 
 # Tensor Flow
 ir = ImageRecognizer(
-    data['abs_path'] + data['tf_path'],
+    abs_path + data['tf_path'],
     data['tensor_flow']['graph'],
     data['tensor_flow']['labels'],
     data['tensor_flow']['input_layer_name'],
@@ -31,7 +33,7 @@ def upload():
     if request.method == 'POST':
         file = request.files.get('fileupload')
         filename = file.filename
-        file.save(data['abs_path'] + data['img_path'] + filename)
+        file.save(abs_path + data['img_path'] + filename)
 
         results = ir.recognize(data['img_path'] + filename)
         results['image'] = filename
