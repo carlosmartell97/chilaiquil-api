@@ -1,7 +1,6 @@
 # /bin/bash
-
 if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
+  then echo "Please run as root."
   exit
 fi
 
@@ -24,6 +23,9 @@ pip3 install pymongo
 
 echo "Installing Flask..."
 pip3 install flask
+
+echo "Installing TensorFlow..."
+pip3 install tensorflow
 
 echo "Starting Mongo daemon..."
 service mongod start
