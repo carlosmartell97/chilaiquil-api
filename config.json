@@ -1,0 +1,19 @@
+{
+  "mongo_db": {
+    "address": "localhost",
+    "port": 27017,
+    "database": "chilaiquil",
+    "collection": "queries",
+    "images": "img"
+  },
+  "tensor_flow": {
+    "graph": "retrained_graph.pb",
+    "labels": "retrained_labels.txt",
+    "input_layer_name": "DecodeJpeg/contents:0",
+    "output_layer_name": "final_result:0",
+    "num_top_predictions": 5
+  },
+  "abs_path": "/home/mike/Files/Documents/Hackatons/HackMty2017/api/",
+  "img_path": "img/",
+  "tf_path": "tf/"
+}
