@@ -1,4 +1,4 @@
-# ChilAIqui
+# ChilAIquil
 ## About
 ChilAIquil is a food-image recongition software. It currently supports the following foods:
 - Chilaquiles

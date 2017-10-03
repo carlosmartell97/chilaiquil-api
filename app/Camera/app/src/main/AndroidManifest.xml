@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="chileyequil.camera" >
 
@@ -6,15 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/nachos"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
 
-        <paths xmlns:android="http://schemas.android.com/apk/res/android">
+        <data xmlns:android="http://schemas.android.com/apk/res/android">
             <external-path android:name="my_images" android:path="Android/data/chileyequil.camera/files/Pictures" />
-        </paths>
+        </data>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

@@ -185,7 +185,7 @@ public class chileyequil extends AppCompatActivity {
     private void uploadImage() {
         //Showing the progress dialog
         final ProgressDialog loading = ProgressDialog.show(this, "Uploading...", "Please wait...", false, false);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://130.211.128.2/upload",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
@@ -234,14 +234,14 @@ public class chileyequil extends AppCompatActivity {
         return encodedImage;
     }
 
+    String url = "http://35.202.255.134/upload";
+    //String url = "http://10.12.221.36/upload";
+    // String url = "http://130.211.128.2/upload";
     protected void onActivityResult(int requestCode, int resultCode, android.content.Intent data) {
         image.setImageURI(photoURI);
         textView1.setVisibility(View.VISIBLE);
         boton.setVisibility(View.VISIBLE);
         final ProgressDialog loading = ProgressDialog.show(this,"Recognizing...","Please wait...",false,false);
-
-        String url = "http://130.211.128.2/upload";
-        //String url = "http://10.12.221.36/upload";
 
         AsyncHttpClient client = new AsyncHttpClient();
 
